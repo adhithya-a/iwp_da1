@@ -1,0 +1,147 @@
+
+@font-face {
+    font-family: amsterdam;
+    src: url("Amsterdam.ttf");
+}
+@keyframes skew-anim {
+    25% {
+        transform: skew(2deg, 2deg);
+    }
+
+    50% {
+        /* transform: skew(0, 0); */
+        transform: skew(-2deg, -2deg);
+    }
+
+    75% {
+        transform: skew(2deg, 2deg);
+    }
+
+    100% {
+        transform: skew(-2deg, -2deg);
+    }
+}
+@keyframes get-started {
+    20% {
+        transform: translateY(-.5em);
+    }
+}
+.cover {
+    background-image: url("ghee-roast-dosa.jpeg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* display: grid; */
+    position: relative;
+    overflow: hidden;
+}
+.cover-title-background {
+    background-color: rgb(187, 255, 0, 0.1);
+}
+
+.cover-title-background .cover-title {
+    /* padding-top: 0.8em;
+    padding-bottom: 2.2em;
+    height: 100vh; */
+    padding: 0.5em;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    right: 10vw;
+    font-family: amsterdam;
+    font-size: 6em;
+    font-weight: 500;
+    -webkit-text-stroke: 0.03em #130707;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(240, 233, 27), rgb(216, 182, 10));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: skew-anim 7s infinite;
+}
+.split-background {
+    overflow: hidden;
+    background: url("a2b-dosa.jpg");
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    padding: 5em 0;
+    height: 95vh;
+}
+.split {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.left {
+    left: 20;
+    width: 50vw;
+    color:rgb(0, 0, 0);
+    background-color: grey;
+    /* background: url("a2b-dosa.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    padding: 2em 0;
+    height: auto;
+    overflow: hidden;
+}
+
+.right {
+    right: 20;
+    width: 50vw;
+    height: 50wv;
+    background-color: grey;
+    color:#151414;
+    padding: 2em 0;
+}
+.right h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.centered {
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+p .info
+{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: black;
+    /* transform: translateX(15em) skewX(10deg) scaleX(1.3); */
+    /* text-shadow: rgb(241, 121, 73) 0.1em 0.1em 0.1em; */
+    position: relative;
+}
+
+button#start-button {
+    font-size: 0.5em;
+    /* position: relative; */
+    padding: .4em 1em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: .4em;
+    top: 25vh;
+    left: 15vw;
+    color: white;
+    background-color: black;
+    transition: background-color .2s, box-shadow .1s;
+    animation: get-started 1s infinite;
+}
+
+button#start-button:hover {
+    background-color: greenyellow;
+    color: black;
+    box-shadow: green 0 .4em .4em 0;
+}
